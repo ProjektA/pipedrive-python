@@ -59,9 +59,7 @@ class Client:
             :param response:
             :return:
         """
-        if response.status_code == 204 or response.status_code == 201:
-            return True
-        elif response.status_code == 400:
+        if response.status_code == 400:
             raise Exception(
                 "The URL {0} retrieved an {1} error. Please check your request body and try again.\nRaw message: {2}".format(
                     response.url, response.status_code, response.text))
