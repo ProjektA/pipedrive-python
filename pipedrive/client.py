@@ -464,9 +464,9 @@ class Client:
         return self._get(url, **kwargs)
     
     # Stages section, see the api documentation: https://developers.pipedrive.com/docs/api/v1/#!/Stages
-    def get_stages(self, pipeline_id=None, **kwargs):
-        if pipeline_id is not None:
-            url = "stages/{}".format(pipeline_id)
+    def get_stages(self, stage_id=None, **kwargs):
+        if stage_id is not None:
+            url = "stages/{}".format(stage_id)
         else:
             url = "stages"
             
